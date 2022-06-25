@@ -9,12 +9,12 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 	<h1>Lista de Alunos</h1>
 	<h3><a href="/cadastrarAluno">Cadastrar um aluno</a></h3>
 	<!-- Faz um loop e obtem os alunos cadastrados -->
-	<div th:each="infoAluno : $(alunos)">
+	<div th:each="infoAluno : ${(alunos)}">
 		<div class="row">
-			<p><span th:text="${infoAluno.matricula}"></span></p> 
-			<p><span th:text="${infoAluno.nome}"></span></p>
-			<p><span th:text="${infoAluno.telefone}"></span></p>
-			<p><span th:text="${infoAluno.email}"></span></p>
+		<p><span th:text="${infoAluno.matricula}"></span></p>
+		<p><span th:text="${infoAluno.nome}"></span></p>
+		<p><span th:text="${infoAluno.telefone}"></span></p>
+		<p><span th:text="${infoAluno.email}"></span></p>
 		</div>
 	</div>
 	</form>

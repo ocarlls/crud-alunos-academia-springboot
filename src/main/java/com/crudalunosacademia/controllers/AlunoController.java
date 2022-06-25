@@ -27,7 +27,7 @@ public class AlunoController {
 		
 		alunoRepository.save(aluno);
 		
-		return "redirect:/cadastrarAluno";
+		return "redirect:/alunos";
 	}
 	
 	//Quando receber uma requisição da pagina /alunos, devolve pra view pelo thymeleaf a lista de alunos que foi obtida no BD
