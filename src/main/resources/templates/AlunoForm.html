@@ -4,16 +4,28 @@ xmlns:th="http://thymeleaf.org"
 xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 <title>AppAlunosAcademia</title>
+<!--Import Google Icon Font-->
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+ <!--Import materialize.css-->
+ <link type="text/css" rel="stylesheet" href="materialize-v1.0.0/materialize/css/materialize.min.css"  media="screen,projection"/>
 </head>
 	<body>
-	<h1>Cadastro de Alunos</h1>
-	<form method="post">
-	Nome: <input type="text" value="" name="nome"></input>
-	Telefone: <input type="text" value="" name="telefone"></input>
-	Email: <input type="email" value="" name="email"></input>
+	<div class="container">
+	<h2>Cadastro de Alunos</h1>
+	<h3><a href="/alunos" class="waves-effect waves-light btn"><i class="material-icons left">list</i>Alunos Cadastrados</a></h3>
+	<form method="post" class="container">
+	<div class="row">
+		<div class="input-field col s6">Nome: <input type="text" value="" name="nome"></input></div>
+		<div class="input-field col s6"> Telefone: <input type="text" value="" name="telefone"></input></div>
+		<div class="input-field col s12">Email: <input type="email" value="" name="email"></input></div>
+	</div>
 	
-	<button type ="submit">Salvar</button>
+	
+	
+	<button type ="submit" class="waves-effect waves-light btn"><i class="material-icons left">save</i>Salvar</button>
 	
 	</form>
+	<script type="text/javascript" src="materialize-v1.0.0/materialize/js/materialize.min.js"></script>
 	</body>
+	</div>
 </html>
