@@ -31,7 +31,7 @@ public class AlunoController {
 	}
 	
 	//Quando receber uma requisição da pagina /alunos, devolve pra view pelo thymeleaf a lista de alunos que foi obtida no BD
-	@RequestMapping(value="/alunos", method=RequestMethod.GET)
+	@RequestMapping(value="/", method=RequestMethod.GET)
 	public ModelAndView listaAlunos() {
 		ModelAndView mv = new ModelAndView("index"); 
 		Iterable<AlunoModel> alunos = alunoRepository.findAll();
