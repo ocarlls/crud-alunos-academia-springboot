@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-public class AlunoModel implements Serializable{
+public class Aluno implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
