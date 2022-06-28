@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,7 +19,9 @@ public class Aluno implements Serializable{
 	
 	private String nome;
 	private String telefone;
-	private String email; 
+	private String email;
+	@OneToOne
+	private Endereco endereco;
 	
 	
 	public String getNome() {
@@ -44,5 +47,11 @@ public class Aluno implements Serializable{
 	}
 	public void setMatricula(long matricula) {
 		this.matricula = matricula;
+	}
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 }

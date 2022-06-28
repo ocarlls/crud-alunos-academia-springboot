@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.crudalunosacademia.models.Aluno;
+import com.crudalunosacademia.models.Endereco;
 import com.crudalunosacademia.repository.AlunoRepository;
+import com.crudalunosacademia.repository.EnderecoRepository;
 
 @Controller
 public class AlunoController {
@@ -15,6 +17,9 @@ public class AlunoController {
 	//Faz a injeção de dependencia(instancia a interface "AlunoRepository" toda vez que for necessário)
 	@Autowired
 	private AlunoRepository alunoRepository;
+
+	@Autowired
+	private EnderecoRepository enderecoRepository;
 	
 	//Retorna o formulário toda vez que tiver uma requisição (GET)
 	@RequestMapping(value="/cadastrarAluno", method=RequestMethod.GET)
@@ -24,10 +29,10 @@ public class AlunoController {
 	
 	//Faz a requisição de salvar os dados no BD (POST)
 	@RequestMapping(value="/cadastrarAluno", method=RequestMethod.POST)
-	public String form(Aluno aluno) {
+	public String form(Aluno aluno, Endereco endereco) {
 		
 		alunoRepository.save(aluno);
-		
+		enderecoRepository.save(endereco);
 		return "redirect:/";
 	}
 	
