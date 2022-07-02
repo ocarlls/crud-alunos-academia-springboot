@@ -12,12 +12,14 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
  <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-	<body>
-	
-	<p><div><span th:text="${detalhesAluno.matricula}"</span><p>
-	<p><div><span th:text="${detalhesAluno.nome}"</span><p>
-	<p><div><span th:text="${detalhesAluno.telefone}"</span><p>
-	<p><div><span th:text="${detalhesAluno.endereço}"</span><p>
+<body class="container">
+
+	<div class="section container">
+		<h3><span th:text="${aluno.nome}"></span></h3>
+		<p>Telefone: <span th:text="${aluno.telefone}"></span></p>
+		<p>Email: <span th:text="${aluno.email}"></span></p>
+		<p>Nº Matricula: <span th:text="${aluno.matricula}"></span></p>
+	</div>
 	
 	<script type="text/javascript" src="materialize-v1.0.0/materialize/js/materialize.min.js"></script>
 	</body>

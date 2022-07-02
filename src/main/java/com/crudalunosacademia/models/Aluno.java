@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 @Entity
 public class Aluno implements Serializable{
@@ -20,7 +20,9 @@ public class Aluno implements Serializable{
 	private String nome;
 	private String telefone;
 	private String email;
+	
 	@OneToOne
+	@JoinColumn(name="chave_endereco")
 	private Endereco endereco;
 	
 	

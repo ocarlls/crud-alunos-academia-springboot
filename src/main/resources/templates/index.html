@@ -14,7 +14,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 </head>
 	<body>
 	<div class="container">
-	<h2>Lista de Alunos</h1>
+	<h2>Lista de Alunos</h2>
 	<h3><a href="/cadastrarAluno" class="waves-effect waves-light btn"><i class="material-icons left">add_box</i>Cadastrar um aluno</a></h3>
 	<!-- Faz um loop e obtem os alunos cadastrados -->
 	 <table class="striped">
@@ -29,7 +29,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
         <tbody>
           <tr th:each="infoAluno : ${(alunos)}">
             <td><span th:text="${infoAluno.matricula}"</span></td>
-            <td><a th:href="@{/detalhesAluno/{matricula}(matricula = ${infoAluno.matricula}) }"><span th:text="${infoAluno.nome}"></span></a></td>
+            <td><a th:href="@{detalhesAluno/{matricula}(matricula = ${infoAluno.matricula})}"><span th:text="${infoAluno.nome}"></span></a></td>
             <td><span th:text="${infoAluno.telefone}"</span></td>
             <td><span th:text="${infoAluno.email}"</span></td>
           </tr>
