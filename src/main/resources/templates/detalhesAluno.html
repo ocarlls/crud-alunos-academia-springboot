@@ -15,10 +15,15 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <body class="container">
 
 	<div class="section container">
-		<h3><span th:text="${aluno.nome}"></span></h3>
+		<h2>Detalhes Aluno</h2>
+		<p>Nome: <span th:text="${aluno.nome}"></span>
 		<p>Telefone: <span th:text="${aluno.telefone}"></span></p>
 		<p>Email: <span th:text="${aluno.email}"></span></p>
 		<p>Nº Matricula: <span th:text="${aluno.matricula}"></span></p>
+		<h2>Endereço</h2>
+		<p>Rua: <span th:text="${aluno.endereco.rua}"></span></p>
+		<p>Bairro: <span th:text="${aluno.endereco.bairro}"></span></p>
+		<p>Cep: <span th:text="${aluno.cep}"></span></p>
 	</div>
 	
 	<script type="text/javascript" src="materialize-v1.0.0/materialize/js/materialize.min.js"></script>

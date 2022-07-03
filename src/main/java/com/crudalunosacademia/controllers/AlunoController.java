@@ -56,9 +56,9 @@ public class AlunoController {
 	@RequestMapping(value="/enderecoForm/{matricula}", method=RequestMethod.POST)
 	public String enderecoForm(@PathVariable("matricula") long matricula, Endereco endereco) {
 		Aluno aluno = alunoRepository.findByMatricula(matricula);
-		enderecoRepository.save(endereco);
 		aluno.setEndereco(endereco);
-		return "redirect:";
+		enderecoRepository.save(endereco);
+		return "redirect:/";
 	}
 	
 	//Apresenta a pagina de detalhes do aluno
