@@ -41,19 +41,17 @@ public class AlunoController {
 	public String form(Aluno aluno, RedirectAttributes redirectAttributes) {
 		alunoRepository.save(aluno);
 		redirectAttributes.addAttribute("matricula", aluno.getMatricula());
-		return "redirect:/enderecoForm/{matricula}";
+		return "redirect:/{matricula}";
 	}
 	
-	
-	
-	@RequestMapping(value="/enderecoForm/{matricula}", method=RequestMethod.GET)
+	@RequestMapping(value="/{matricula}", method=RequestMethod.GET)
 	public ModelAndView enderecoForm(Endereco endereco) {
 		ModelAndView mv = new ModelAndView("enderecoForm");
 		mv.addObject("endereco", endereco);
 		return mv;
 	}
 	
-	@RequestMapping(value="/enderecoForm/{matricula}", method=RequestMethod.POST)
+	@RequestMapping(value="/{matricula}", method=RequestMethod.POST)
 	public String enderecoForm(@PathVariable("matricula") long matricula, Endereco endereco) {
 		Aluno aluno = alunoRepository.findByMatricula(matricula);
 		aluno.setEndereco(endereco);
@@ -62,7 +60,7 @@ public class AlunoController {
 	}
 	
 	//Apresenta a pagina de detalhes do aluno
-	@RequestMapping(value="detalhesAluno/{matricula}", method=RequestMethod.GET)
+	@RequestMapping(value="/detalhesAluno/{matricula}", method=RequestMethod.GET)
 	public ModelAndView detalhesAluno(@PathVariable("matricula") long matricula) {
 		Aluno aluno = alunoRepository.findByMatricula(matricula);
 		ModelAndView mv = new ModelAndView("detalhesAluno");

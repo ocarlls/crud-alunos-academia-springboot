@@ -29,7 +29,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
         <tbody>
           <tr th:each="infoAluno : ${(alunos)}">
             <td><span th:text="${infoAluno.matricula}"</span></td>
-            <td><a th:href="@{detalhesAluno/{matricula}(matricula = ${infoAluno.matricula})}"><span th:text="${infoAluno.nome}"></span></a></td>
+            <td><a th:href="@{/detalhesAluno/{matricula}(matricula = ${infoAluno.matricula})}"><span th:text="${infoAluno.nome}"></span></a></td>
             <td><span th:text="${infoAluno.telefone}"</span></td>
             <td><span th:text="${infoAluno.email}"</span></td>
           </tr>
