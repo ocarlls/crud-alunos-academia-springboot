@@ -21,9 +21,13 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 		<p>Email: <span th:text="${aluno.email}"></span></p>
 		<p>Nº Matricula: <span th:text="${aluno.matricula}"></span></p>
 		<h2>Endereço</h2>
-		<p>Rua: <span th:text="${aluno.endereco.rua}"></span></p>
-		<p>Bairro: <span th:text="${aluno.endereco.bairro}"></span></p>
-		<p>Cep: <span th:text="${aluno.cep}"></span></p>
+		<p>Rua: <span th:text="${aluno.getEndereco().rua}"></span></p>
+		<p>Número: <span th:text="${aluno.getEndereco().numero}"></span></p>
+		<p>Complemento: <span th:text="${aluno.getEndereco().complemento}"></span></p>
+		<p>Bairro: <span th:text="${aluno.getEndereco().bairro}"></span></p>		
+		<p>Cep: <span th:text="${aluno.getEndereco().cep}"></span></p>
+		<p>Cidade: <span th:text="${aluno.getEndereco().cidade}"></span></p>
+		<p>Estado: <span th:text="${aluno.getEndereco().estado}"></span></p>		
 	</div>
 	
 	<script type="text/javascript" src="materialize-v1.0.0/materialize/js/materialize.min.js"></script>

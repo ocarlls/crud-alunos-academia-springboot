@@ -4,6 +4,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.NotEmpty;
 
 
 @Entity
@@ -11,13 +12,19 @@ public class Endereco {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
-	
-	private String cidade;  
-	private String estado; 
+	@NotEmpty
+	private String cidade;
+	@NotEmpty
+	private String estado;
+	@NotEmpty
 	private String bairro;
+	@NotEmpty
 	private String rua;
+	@NotEmpty
 	private String numero;
+	@NotEmpty
 	private String cep;
+	@NotEmpty
 	private String complemento;
 		
 	public Endereco() {

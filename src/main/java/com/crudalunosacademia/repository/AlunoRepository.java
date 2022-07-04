@@ -5,4 +5,5 @@ import com.crudalunosacademia.models.Aluno;
 
 public interface AlunoRepository extends CrudRepository<Aluno, String>{
 	Aluno findByMatricula(long matricula);
+	
 }

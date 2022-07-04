@@ -21,7 +21,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 		<div class="input-field col s12">Email: <input type="email" value="" name="email"></input></div>
 	</div>
 	<button type ="submit" class="waves-effect waves-light btn"><i class="material-icons left">save</i>Salvar</button>
-	
+	<th:block th:include="mensagemValidacao"></th:block>
 	</form>
 	<script type="text/javascript" src="materialize-v1.0.0/materialize/js/materialize.min.js"></script>
 	</body>
