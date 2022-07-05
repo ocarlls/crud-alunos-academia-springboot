@@ -30,6 +30,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
               <th>Nome</th>
               <th>Telefone</th>
               <th>Email</th>
+              <th>Deletar</th>
           </tr>
         </thead>
         <tbody>
@@ -38,6 +39,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
             <td><a th:href="@{detalhesAluno/{matricula} (matricula = ${infoAluno.matricula})}"><span th:text="${infoAluno.nome}"></span></a></td>
             <td><span th:text="${infoAluno.telefone}"</span></td>
             <td><span th:text="${infoAluno.email}"</span></td>
+            <td><a th:href="@{deletaAluno/{matricula} (matricula = ${infoAluno.matricula})}" class="waves-effect waves-light btn-small"><i class="material-icons">delete_forever</i></a></td>
           </tr>
         </tbody>
       </table>

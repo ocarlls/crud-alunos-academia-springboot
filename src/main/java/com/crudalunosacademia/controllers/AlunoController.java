@@ -79,6 +79,13 @@ public class AlunoController {
 		mv.addObject("aluno", aluno);
 		return mv;
 	}
+	  
+	@RequestMapping("deletaAluno/{matricula}")
+	public String deletaCadastro(@PathVariable("matricula") long matricula) {
+		Aluno aluno = alunoRepository.findByMatricula(matricula);
+		alunoRepository.delete(aluno);
+		return "redirect:/";
+	}
 	
 	
 }

@@ -1,7 +1,7 @@
 package com.crudalunosacademia.models;
 import java.io.Serializable;
 
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +26,7 @@ public class Aluno implements Serializable{
 	@NotEmpty
 	private String email;
 	
-	@OneToOne
+	@OneToOne(mappedBy="", cascade = CascadeType.ALL)
 	@JoinColumn(name="chave_endereco")
 	private Endereco endereco;
 	
