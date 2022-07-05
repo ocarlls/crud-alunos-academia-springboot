@@ -7,19 +7,29 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
  <!--Import Google Icon Font-->
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
  <!--Import materialize.css-->
- <link type="text/css" rel="stylesheet" href="materialize-v1.0.0/materialize/css/materialize.min.css"  media="screen,projection"/>
+ <link type="text/css" rel="stylesheet" href="/materialize-v1.0.0/materialize/css/materialize.min.css"  media="screen,projection"/>
 
  <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body class="container">
-
-	<div class="section container">
-		<h2>Detalhes Aluno</h2>
+<body class="row">
+	<nav>
+		<div class="nav-wrapper">
+		  <a href="#" class="brand-logo">Detalhes do Aluno</a>
+		  <ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li><a href="/" class="waves-effect waves-light btn"><i class="material-icons left">list</i>Alunos Cadastrados</a></li>
+		  </ul>
+		</div>
+	  </nav>
+	<div class="container">
+	<div class="col s6">
+		<h2>Detalhes Aluno</h2> 
 		<p>Nome: <span th:text="${aluno.nome}"></span>
 		<p>Telefone: <span th:text="${aluno.telefone}"></span></p>
 		<p>Email: <span th:text="${aluno.email}"></span></p>
 		<p>Nº Matricula: <span th:text="${aluno.matricula}"></span></p>
+	</div>
+	<div class="col s6">
 		<h2>Endereço</h2>
 		<p>Rua: <span th:text="${aluno.getEndereco().rua}"></span></p>
 		<p>Número: <span th:text="${aluno.getEndereco().numero}"></span></p>
@@ -29,7 +39,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 		<p>Cidade: <span th:text="${aluno.getEndereco().cidade}"></span></p>
 		<p>Estado: <span th:text="${aluno.getEndereco().estado}"></span></p>		
 	</div>
-	
+	</div>
 	<script type="text/javascript" src="materialize-v1.0.0/materialize/js/materialize.min.js"></script>
 	</body>
 </html>

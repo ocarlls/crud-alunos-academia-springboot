@@ -68,14 +68,13 @@ public class AlunoController {
 		aluno.setEndereco(endereco);
 		enderecoRepository.save(endereco);
 		attributes.addFlashAttribute("mensagem", "Aluno cadastrado com sucesso!!");
-		return "redirect:/";
+		return "redirect:";
 	}
 	
 	//Apresenta a pagina de detalhes do aluno
 	@RequestMapping(value="/detalhesAluno/{matricula}", method=RequestMethod.GET)
 	public ModelAndView detalhesAluno(@PathVariable("matricula") long matricula) {
 		Aluno aluno = alunoRepository.findByMatricula(matricula);
-		
 		ModelAndView mv = new ModelAndView("detalhesAluno");
 		mv.addObject("aluno", aluno);
 		return mv;

@@ -13,9 +13,15 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 	<body>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Gerenciamento de Alunos</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/cadastrarAluno" class="waves-effect waves-light btn"><i class="material-icons left">add_box</i>Cadastrar um aluno</a></li>
+          </ul>
+        </div> 
+      </nav>
 	<div class="container">
-	<h2>Lista de Alunos</h2>
-	<h3><a href="/cadastrarAluno" class="waves-effect waves-light btn"><i class="material-icons left">add_box</i>Cadastrar um aluno</a></h3>
 	<!-- Faz um loop e obtem os alunos cadastrados -->
 	 <table class="striped">
         <thead>
